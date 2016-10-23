@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="../../favicon.ico">
+
+      <title>@yield('title')</title>
+
+      <!-- Bootstrap core CSS -->
+      {!! HTML::style('bootstrap/css/bootstrap.min.css') !!}
+        <link rel="stylesheet"  href="{{ asset('bootstrap/css/font-awesome.min.css')}}">
+
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      {!!HTML::style('bootstrap/css/ie10-viewport-bug-workaround.css') !!}
+
+
+      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+      {!! HTML::script('bootstrap/js/ie-emulation-modes-warning.js') !!}
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Custom styles for this template -->
+      {!! HTML::style('bootstrap/css/carousel.css') !!}
+</head>
+<body>
+        @section('sidebar')
+            <!-- NAVBAR
+            ================================================== -->
+                <div class="navbar-wrapper">
+                  <div class="container">
+
+                    <nav class="navbar navbar-inverse navbar-fixed-top">
+                      <div class="container">
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                          <a class="navbar-brand" href="#">CCO</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                          <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Inicio</a></li>
+                            <li><a href="/#about">Quiénes Somos</a></li>
+                            <li><a href="/#ofertas">Ofertas</a></li>
+                            <li><a href="/#clientes">Nuestros Clientes</a></li>
+                            <li><a href="/#contact">Contáctanos</a></li>
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="/">Cámaras</a></li>
+                                <li><a href="/">Accesorios</a></li>
+                                <li><a href="/">consumibles</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Web</li>
+                                <li><a href="/">Sitios Web</a></li>
+                                <li><a href="/">RedesSociales</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ESCALAFONES <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="{{ route ('admin.escalafones.index') }}">Lista</a></li>
+                                <li><a href="{{ route ('admin.escalafones.create') }}"><i class="fa fa-plus-square" aria-hidden="true"></i> Agregar</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </nav>
+
+                  </div>
+                </div>
+
+                <!-- Carousel
+                ================================================== -->
+               <!--  <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
+                  <!-- Indicators -->
+                  <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img class="first-slide" src="../media/banners/banner1.jpg" alt="First slide">
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <h1>Example headline.</h1>
+                          <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img class="second-slide" src="../media/banners/banner2.jpg" alt="Second slide">
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <h1>Another example headline.</h1>
+                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img class="third-slide" src="../media/banners/banner3.jpg" alt="Third slide">
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <h1>One more for good measure.</h1>
+                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                          <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a> -->
+                <!-- </div> --><!-- /.carousel -->
+        @show
+
+        <div class="container">
+            @yield('content')
+        </div>
+
+        @section('footer')
+          <hr class="featurette-divider">
+          <!-- FOOTER -->
+          <footer>
+            <p class="pull-right"><a href="#">Ir Arriba</a></p>
+            <p>&copy; 2016 CCO &middot; <a href="#">Políticas de Privacidad</a> &middot; <a href="#"> Terminos de Servicio</a></p>
+          </footer>
+        @show
+      <!-- Bootstrap core JavaScript
+          ================================================== -->
+          <!-- Placed at the end of the document so the pages load faster -->
+          {!! HTML::script('bootstrap/js/jquery.min.js') !!}
+          {!! HTML::script('bootstrap/js/myjs.js') !!}
+          {!! HTML::script('bootstrap/js/bootstrap.min.js') !!}
+          {!! HTML::script('bootstrap/js/holder.min.js') !!}
+          {!! HTML::script('bootstrap/js/ie10-viewport-bug-workaround.js') !!}
+
+    </body>
+</html>
