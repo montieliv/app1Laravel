@@ -16,9 +16,9 @@
 	<div class="table-responsive">
 	<table class="table table-condensed table-hover table-rounded table-bordered">
 		<thead>
-			<th class="text-center btn-success">No.</th>
-			<th class="text-center btn-success">Nombre</th>
-			<th class="text-center btn-success">Acción</th>
+			<th class="text-center btn-danger">No.</th>
+			<th class="text-center btn-danger">Nombre</th>
+			<th class="text-center btn-danger">Acción</th>
 		</thead>
 		<tbody>
 		
@@ -26,8 +26,8 @@
 			<tr>			
 				<td class="text-center">{{ $escalafon->nivel }}</td>
 				<td class="text-center">{{ $escalafon->name }}</td>
-				<td class="text-center"><a class="btn btn-primary" href="#" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-										<a class="btn btn-danger" href="#" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+				<td class="text-center"><a class="btn btn-success" href="#" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+										<a class="btn btn-primary" href="#" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 				</td>
 			</tr>
 		@endforeach					
