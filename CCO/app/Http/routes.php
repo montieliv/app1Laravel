@@ -11,14 +11,9 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
     return view('home');
 });
-
 
 Route::get('movimientosSap', [
     'as' => 'movimientosSap', 'uses' => 'MovsapController@index'
@@ -31,3 +26,4 @@ Route::get('InformeEscalafon', [
 Route::group(['prefix' => 'admin'], function () {
     Route::resource('escalafones','EscalafonController');
 });  //seccion admin/escalafones/ .... (index, create, show ....)...
+?>
